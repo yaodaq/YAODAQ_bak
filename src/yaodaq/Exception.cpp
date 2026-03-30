@@ -20,8 +20,6 @@ const char* Exception::description() const noexcept { return m_Description.c_str
 std::int_least32_t Exception::code() const noexcept { return m_Code; }
 
 void Exception::constructMessage()
-{
-  m_Message = fmt::format( m_Style, m_Format, fmt::arg( "Code", m_Code ), fmt::arg( "Description", m_Description ), fmt::arg( "File", file_name() ), fmt::arg( "Function", function_name() ), fmt::arg( "Column", column() ), fmt::arg( "Line", line() ) );
-}
+{ m_Message = fmt::format( m_Style, m_Format, fmt::arg( "Code", m_Code ), fmt::arg( "Description", m_Description ), fmt::arg( "File", file_name() ), fmt::arg( "Function", function_name() ), fmt::arg( "Column", column() ), fmt::arg( "Line", line() ) ); }
 
 }  // namespace yaodaq
