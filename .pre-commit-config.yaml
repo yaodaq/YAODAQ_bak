@@ -66,12 +66,12 @@ repos:
         args: ['--config=.cmake-linter.yml']
 
   - repo: https://github.com/sirosen/check-jsonschema
-    rev: '0.37.1'
+    rev: '0.37.2'
     hooks:
       - id: check-github-workflows
 
   -   repo: https://github.com/pre-commit/mirrors-clang-format
-      rev: 'v22.1.3'
+      rev: 'v22.1.4'
       hooks:
         - id: clang-format
 
